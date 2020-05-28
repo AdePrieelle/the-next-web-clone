@@ -1,4 +1,4 @@
-# New York Times Clone
+# The Next Web Clone
 
 This project is about cloning the thenextweb.com homepage: https://thenextweb.com/
 
