@@ -198,6 +198,8 @@ html {
 	align-items: center;
 	height: 60px;
 	font-size: 13px;
+	color: black;
+	text-decoration: none;
 	background-color: #fd3;
 	box-shadow: 0 16px 48px rgba(0,0,0,.15);
 }
@@ -221,18 +223,52 @@ html {
 .cover {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr;
-	background-color: red;
+	grid-template-rows: 250.8px repeat(2, 278.8px);
+	padding: 0 8px 8px 8px;
+	grid-gap: 8px;
 }
 
 @media screen and (min-width: 768px) {
 	.cover {
 		grid-template-columns: 2fr 1fr;
+		grid-template-rows: repeat(2, 227px);
+		padding-top: 2px;
 	}
 
-	.cover-item-big {
+	.cover-item-1 {
 		grid-row: 1 / -1;
 	}
+}
+
+@media screen and (min-width: 957px) {
+	.cover {
+		grid-template-rows: repeat(2, 274.8px);
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.cover {
+		grid-template-rows: repeat(2, 268px);
+	}
+}
+
+/* Cover item */
+
+.cover-item {
+	background-position: center;
+	background-size: cover;
+}
+
+.cover-item-1 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-2-4-796x417.png");
+}
+
+.cover-item-2 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/Sprint_image.jpg");
+}
+
+.cover-item-3 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Xbox-Series-X-796x417.jpg");
 }
 
 /* Latest-news */
