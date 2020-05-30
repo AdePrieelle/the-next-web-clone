@@ -255,20 +255,119 @@ html {
 /* Cover item */
 
 .cover-item {
+	display: flex;
+	align-items: flex-end;
 	background-position: center;
 	background-size: cover;
 }
 
 .cover-item-1 {
-	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-2-4-796x417.png");
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,.25), black), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-2-4-796x417.png");
+}
+
+.cover-item-1-tnw-logo {
+	margin-top: 20px;
+}
+
+.cover-item-1-tnw-logo-img {
+	display: none;
+	height: 96px;
+	width: 431.56px;
+}
+
+@media screen and (min-width: 1024px) {
+	.cover-item-1-tnw-logo-img {
+		display: block;
+	}
 }
 
 .cover-item-2 {
-	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/Sprint_image.jpg");
+	background-image: linear-gradient(to bottom, rgba(0,0,0,.25), black), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/Sprint_image.jpg");
 }
 
 .cover-item-3 {
-	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Xbox-Series-X-796x417.jpg");
+	background-image: linear-gradient(to bottom, rgba(0,0,0,.25), black), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Xbox-Series-X-796x417.jpg");
+}
+
+/* Cover item content */
+
+.cover-item-header {
+	padding-left: 10px;
+	padding-right: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+	.cover-item-header {
+		padding-left: 20px;
+	}
+}
+
+.cover-item-header-2 {
+	margin-bottom: 20px;
+}
+
+.cover-section-link {
+	font-size: 14px;
+	color: white;
+	font-weight: 500;
+	letter-spacing: 0.56px;
+	line-height: 21px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.cover-title-link {
+	font-size: 20px;
+	color: white;
+	font-weight: 700;
+	letter-spacing: -0.3px;
+	line-height: 22px;
+	text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+	.cover-title-link-1 {
+		font-size: 40px;
+		line-height: 40px;
+		letter-spacing: -0.6px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.cover-title-link-1 {
+		font-size: 56px;
+		line-height: 56px;
+		letter-spacing: -0.84px;
+	}
+
+	.cover-title-link-2,
+	.cover-title-link-3 {
+		font-size: 28px;
+		line-height: 30.8px;
+		letter-spacing: -0.42px;
+	}
+}
+
+.cover-info {
+	display: flex;
+	align-items: center;
+	margin: 5px 0 10px 0;
+	color: hsla(0,0%,100%,.6);
+	line-height: 16px;
+	font-size: 12px;
+}
+
+.cover-info > * {
+	margin-right: 6px;
+}
+
+.cover-info-author {
+	color: hsla(0,0%,100%,.6);
+	text-decoration: none;
 }
 
 /* Latest-news */
