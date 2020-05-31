@@ -262,21 +262,43 @@ html {
 }
 
 .cover-item-1 {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
-	background-image: linear-gradient(to bottom, rgba(0,0,0,.25), black), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-2-4-796x417.png");
+	background-image: linear-gradient(to bottom, rgba(0,0,0,.1), rgba(0, 0, 0, 0.75)), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-2-4-796x417.png");
+}
+
+.cover-item-1-tnw-gradient {
+	display: none;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	background: transparent url("https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/cover-gradient.png") no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+	mix-blend-mode: lighten;
+	pointer-events: none;
+}
+
+@media screen and (min-width: 1024px) {
+	.cover-item-1-tnw-gradient {
+		display: block;
+	}
 }
 
 .cover-item-1-tnw-logo {
 	margin-top: 20px;
+	margin-left: 10px;
 }
 
 .cover-item-1-tnw-logo-img {
 	display: none;
-	height: 96px;
-	width: 431.56px;
+	height: 80px;
+	width: 360px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -285,15 +307,29 @@ html {
 	}
 }
 
+.cover-item-1-tnw-date {
+	position: absolute;
+	top: 16px;
+	right: 24px;
+	z-index: 5;
+	display: none;
+	font-size: 14px;
+	color: white;
+}
+
+@media screen and (min-width: 1024px) {
+	.cover-item-1-tnw-date {
+		display: block;
+	}
+}
+
 .cover-item-2 {
-	background-image: linear-gradient(to bottom, rgba(0,0,0,.25), black), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/Sprint_image.jpg");
+	background-image: linear-gradient(to bottom, rgba(0,0,0,.1), rgba(0, 0, 0, 0.75)), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/Sprint_image.jpg");
 }
 
 .cover-item-3 {
-	background-image: linear-gradient(to bottom, rgba(0,0,0,.25), black), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Xbox-Series-X-796x417.jpg");
+	background-image: linear-gradient(to bottom, rgba(0,0,0,.1), rgba(0, 0, 0, 0.75)), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Xbox-Series-X-796x417.jpg");
 }
-
-/* Cover item content */
 
 .cover-item-header {
 	padding-left: 10px;
