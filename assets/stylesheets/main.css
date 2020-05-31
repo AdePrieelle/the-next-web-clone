@@ -406,24 +406,184 @@ html {
 	text-decoration: none;
 }
 
+/* Wrapper latest-news latest-funding news-categories latest-deals*/
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1192px;
+	padding: 0 20px;
+}
+
 /* Latest-news */
 
 .latest-news {
+	margin-top: 85px;
+}
+
+.latest-news-grid {
 	display: grid;
 	grid-template-columns: 1fr;
-	background-color: grey;
+	grid-gap: 12px;
 }
 
 @media screen and (min-width: 768px) {
-	.latest-news {
+	.latest-news-grid {
 		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 20px;
 	}
 }
 
 @media screen and (min-width: 1024px) {
-	.latest-news {
+	.latest-news-grid {
 		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 24px;
 	}
+}
+
+/* Latest-news title */
+
+.latest-news-title {
+	margin-bottom: 24px;
+}
+
+.latest-news-title-link {
+	display: flex;
+	align-items: baseline;
+	font-size: 28px;
+	color: #f42;
+	font-weight: 700;
+	line-height: 1.1;
+	text-decoration: none;
+}
+
+.latest-news-title-link-icon {
+	margin-left: 4px;
+	width: 16px;
+	height: 16px;
+	color: #f42;
+	background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke="%23F42" stroke-width="3" stroke-miterlimit="10" d="M4.75 1.5l6.5 6.5-6.5 6.5"/></svg>');
+}
+
+/* .latest-news-grid-item */
+
+.latest-news-grid-item {
+	display: flex;
+}
+
+@media screen and (min-width: 768px) {
+	.latest-news-grid-item {
+		display: block;
+	}
+}
+
+.wrapper-latest-news-grid-item-thumbnail {
+	height: 75px;
+	width: 75px;
+}
+
+@media screen and (min-width: 768px) {
+	.wrapper-latest-news-grid-item-thumbnail {
+		position: relative;
+		width: 100%;
+		padding-top: 50%;
+	}
+}
+
+.latest-news-grid-item-thumbnail {
+	width: 75px;
+	height: 75px;
+	background-size: cover;
+	background-position: 50%;
+}
+
+@media screen and (min-width: 768px) {
+	.latest-news-grid-item-thumbnail {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.latest-news-grid-item-author-time-ago {
+	display: flex;
+	margin-top: 4px;
+	font-size: 12px;
+	color: #aaa;
+	line-height: 18px;
+}
+
+.latest-news-grid-item-author::after {
+	content: "\B7";
+	display: block;
+	float: right;
+	margin: 0 4px;
+}
+
+.latest-news-grid-item-title-author-time-ago {
+	margin-left: 13px;
+}
+
+@media screen and (min-width: 768px) {
+	.latest-news-grid-item-title-author-time-ago {
+		margin-left: 0px;
+		margin-top: 8px;
+	}
+}
+
+.latest-news-grid-item-title {
+	margin-bottom: 1px;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 18px;
+}
+
+@media screen and (min-width: 1024px) {
+	.latest-news-grid-item-title {
+		font-size: 16px;
+		line-height: 20px;
+	}
+}
+
+.latest-news-grid-item-title-link {
+	font-size: 14px;
+	color: black;
+	text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+	.latest-news-grid-item-title-link {
+		font-size: 16px;
+		line-height: 20px;
+	}
+}
+
+.latest-news-grid-item-thumbnail-1 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/TNW-Email-405x270.jpeg");
+}
+
+.latest-news-grid-item-thumbnail-2 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/TNW-Social-481x270.jpeg");
+}
+
+.latest-news-grid-item-thumbnail-3 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/two-bikes-515x270.png");
+}
+.latest-news-grid-item-thumbnail-4 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/Word-Pigeon-540x270.jpg");
+}
+.latest-news-grid-item-thumbnail-5 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-2-4-516x270.png");
+}
+.latest-news-grid-item-thumbnail-6 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Xbox-Series-X-516x270.jpg");
+}
+.latest-news-grid-item-thumbnail-7 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/Untitled-design-59-516x270.png");
+}
+.latest-news-grid-item-thumbnail-8 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/03/zuckerberg-analytica-513x270.jpg");
 }
 
 /* Latest-funding */
@@ -431,6 +591,7 @@ html {
 .latest-funding {
 	display: grid;
 	grid-template-columns: 1fr;
+	margin-top: 80px;
 	background-color: orange;
 }
 
