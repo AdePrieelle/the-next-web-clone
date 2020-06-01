@@ -452,13 +452,11 @@ html {
 
 /* Latest-news title */
 
-.latest-news-title {
+.latest-news > .section-title {
 	margin-bottom: 24px;
 }
 
-.latest-news-title-link {
-	display: flex;
-	align-items: baseline;
+.section-title-link {
 	font-size: 28px;
 	color: #f42;
 	font-weight: 700;
@@ -466,12 +464,15 @@ html {
 	text-decoration: none;
 }
 
-.latest-news-title-link-icon {
-	margin-left: 4px;
-	width: 16px;
-	height: 16px;
-	color: #f42;
+.section-title-link::after {
 	background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke="%23F42" stroke-width="3" stroke-miterlimit="10" d="M4.75 1.5l6.5 6.5-6.5 6.5"/></svg>');
+	background-size: 16px 16px;
+	content: "";
+	display: inline-block;
+	height: 16px;
+	position: relative;
+	top: 0;
+	width: 16px;
 }
 
 /* .latest-news-grid-item */
@@ -599,28 +600,89 @@ html {
 /* Latest-funding */
 
 .latest-funding {
+	margin-top: 85px;
+}
+
+/* Latest-funding-section-title-links */
+
+@media screen and (min-width: 1024px) {
+	.latest-funding-section-title-links {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+	}
+}
+
+.latest-funding-section-links {
+	display: flex;
+	flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+	.latest-funding-section-links {
+		flex-direction: row;
+	}
+}
+
+.latest-funding-section-link {
+	margin-top: 11px;
+	font-size: 14px;
+	color: #f42;
+	line-height: 18px;
+	text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+	.latest-funding-section-link {
+		margin-right: 23px;
+		font-size: 16px;
+	}
+
+	.latest-funding-section-link:last-child {
+		margin-right: 0px;
+	}
+}
+
+.latest-funding-section-link:not(:last-child)::after {
+	display: inline-block;
+	content: "|";
+	margin-left: 10px;
+	margin-right: 10px;
+	display: none;
+	pointer-events: none;
+	position: absolute;
+}
+
+@media screen and (min-width: 768px) {
+	.latest-funding-section-link:not(:last-child)::after {
+		display: inline-block;
+	}
+}
+
+/* Latest-funding-grid */
+
+.latest-funding-grid {
 	display: grid;
 	grid-template-columns: 1fr;
-	margin-top: 80px;
 	background-color: orange;
 }
 
-.latest-funding-item-last {
+.latest-funding-grid-item:last-child {
 	display: none;
 }
 
 @media screen and (min-width: 768px) {
-	.latest-funding {
+	.latest-funding-grid {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
 @media screen and (min-width: 1024px) {
-	.latest-funding {
+	.latest-funding-grid {
 		grid-template-columns: repeat(4, 1fr);
 	}
 
-	.latest-funding-item-last {
+	.latest-funding-grid-item:last-child {
 		display: block;
 	}
 }
