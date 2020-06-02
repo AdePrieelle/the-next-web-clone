@@ -795,8 +795,13 @@ html {
 .news-categories-grid {
 	display: grid;
 	grid-template-columns: 1fr;
-	margin-top: 20px;
-	background-color: lightskyblue;
+	grid-gap: 25px;
+}
+
+@media screen and (min-width: 768px) {
+	.news-categories-grid {
+		grid-row-gap: 50px;
+	}
 }
 
 @media screen and (min-width: 768px) {
@@ -813,12 +818,233 @@ html {
 
 /* News-categories-grid-item */
 
+.news-category-grid-item-main-suggestion {
+	height: 0;
+	padding-top: 75%;
+	position: relative;
+	width: 100%;
+	margin-top: 20px;
+}
 
+.news-category-grid-item-main-suggestion-img {
+	background-size: 100% 100%;
+	background-color: #000;
+	background-size: cover;
+	background-position: 50%;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+}
+
+.news-category-grid-item-main-suggestion-img-1 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/06/Dallas-Skyline-368x276.jpg");
+}
+
+.news-category-grid-item-main-suggestion-img-2 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/06/Snag_47f35c43-368x276.png");
+}
+
+.news-category-grid-item-main-suggestion-img-3 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/06/layoffs-368x276.jpg");
+}
+
+.news-category-grid-item-main-suggestion-img-4 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/Untitled-design-1-368x276.jpg");
+}
+
+.news-category-grid-item-main-suggestion-img-5 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/gary-vaynerchuk-368x276.jpg");
+}
+
+.news-category-grid-item-main-suggestion-img-6 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/06/BMW-m5-all-electric-car-iconic-powerful-1000bhp-sedan-tesla-plaid-368x276.jpg");
+}
+
+.news-category-grid-item-main-suggestion-img-7 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/Facebook-Discover-368x276.jpg");
+}
+
+.news-category-grid-item-main-suggestion-img-8 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/03/zuckerberg-analytica-368x276.jpg");
+}
+
+.news-category-grid-item-main-suggestion-img-gradient {
+	background: transparent url("https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/image-gradient.png") no-repeat;
+	background-size: auto;
+	background-size: 100% 100%;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+}
+
+.news-category-grid-item-main-suggestion-header {
+	bottom: 0;
+	left: 0;
+	padding: 14px;
+	position: absolute;
+	right: 0;
+	z-index: 3;
+}
+
+.news-category-grid-item-main-suggestion-popular {
+	color: #fff;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 19.5px;
+	pointer-events: none;
+	text-transform: uppercase;
+}
+
+.news-category-grid-item-main-suggestion-title {
+	margin-bottom: 6px;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 22px;
+}
+
+.news-category-grid-item-main-suggestion-title-link {
+	color: #fff;
+	text-decoration: none;
+}
+
+.news-category-grid-item-main-suggestion-author-time-ago {
+	display: flex;
+	color: hsla(0,0%,100%,.6);
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 16px;
+}
+
+.news-category-grid-item-main-suggestion-author {
+	color: hsla(0,0%,100%,.6);
+	text-decoration: none;
+}
+
+.news-category-grid-item-main-suggestion-author::after {
+	content: "\B7";
+	display: block;
+	float: right;
+	margin: 0 4px;
+}
+
+.news-category-grid-item-latest-article {
+	display: flex;
+	flex-direction: row;
+	background-color: rgba(255,68,34,.06);
+	margin: 2px 0;
+}
+
+.news-category-grid-item-latest-article-subcategory-title {
+	flex: 1;
+	overflow: hidden;
+	padding: 10px 14px 0;
+}
+
+.news-category-grid-item-latest-article-subcategory {
+	color: #f42;
+	font-size: 13px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.52px;
+	line-height: 19.5px;
+}
+
+.news-category-grid-item-latest-article-title {
+	max-height: 56px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 100%;
+	font-size: 14px;
+	color: #f42;
+	font-weight: 700;
+	line-height: 17.5px;
+}
+
+.news-category-grid-item-latest-article-title-link {
+	color: #f42;
+	text-decoration: none;
+}
+
+.news-category-grid-item-latest-article-img {
+	opacity: 1;
+	flex: 0 0 96px;
+	background-color: #000;
+	background-position: 50%;
+	background-size: cover;
+	height: 96px;
+	width: 96px;
+}
+
+.news-category-grid-item-latest-article-img-1 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/Untitled-design-59.png");
+}
+
+.news-category-grid-item-latest-article-img-2 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/06/download.jpg");
+}
+
+.news-category-grid-item-latest-article-img-3 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/06/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-5.png");
+}
+
+.news-category-grid-item-latest-article-img-4 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/windows-xp-css-library.png");
+}
+
+.news-category-grid-item-latest-article-img-5 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/image5.png");
+}
+
+.news-category-grid-item-latest-article-img-6 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/06/90s-business-lesson-gq.png");
+}
+
+.news-category-grid-item-latest-article-img-7 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/JioMart-WhatsApp-Ordering-hed.jpg");
+}
+
+.news-category-grid-item-latest-article-img-8 {
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/05/call-of-duty-warzone-modern-warfare-loadout-reddit.jpg");
+}
+
+.news-category-grid-item-suggested-title {
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 19.5px;
+	border-bottom: 1px solid #eee;
+}
+
+.news-category-grid-item-suggested-title-link {
+	color: #555;
+	display: block;
+	padding: 6px 0 6px 14px;
+	position: relative;
+	text-decoration: none;
+}
+
+.news-category-grid-item-suggested-title-link::before {
+	background-color: #f42;
+	border-radius: 50%;
+	content: "";
+	display: block;
+	height: 4px;
+	left: 0;
+	position: absolute;
+	top: 14px;
+	width: 4px;
+}
 
 /* Latest-deals */
 .latest-deals {
 	display: grid;
 	grid-template-columns: 1fr;
+	margin-top: 80px;
 	background-color: olivedrab;
 }
 
