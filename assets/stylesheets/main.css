@@ -1041,28 +1041,226 @@ html {
 }
 
 /* Latest-deals */
+
 .latest-deals {
-	display: grid;
-	grid-template-columns: 1fr;
 	margin-top: 80px;
-	background-color: olivedrab;
+}
+
+/* Latest-deals-header */
+
+.latest-deals-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.latest-deals-more {
+	font-size: 14px;
+	color: #f42;
+	text-decoration: none;
 }
 
 @media screen and (min-width: 768px) {
-	.latest-deals {
+	.latest-deals-more {
+		font-size: 16px;
+	}
+}
+
+/* Latest-deals-grid */
+
+.latest-deals-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 16px;
+	margin-top: 24px;
+}
+
+@media screen and (min-width: 768px) {
+	.latest-deals-grid {
 		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 20px;
 	}
 }
 
 @media screen and (min-width: 1024px) {
-	.latest-deals {
+	.latest-deals-grid {
 		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 24px;
+	}
+}
+
+/* Latest-deals grid-item */
+
+.latest-deals-grid-item {
+	position: relative;
+	min-height: 72px;
+	padding-left: 88px;
+}
+
+@media screen and (min-width: 768px) {
+	.latest-deals-grid-item {
+		padding-left: 0px;
+	}
+}
+
+.latest-deals-grid-item-img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 75px;
+	margin-bottom: 8px;
+	padding-top: 75px;
+	background-color: #000;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+	.latest-deals-grid-item-img {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 0;
+		padding-top: 74.5%;
+		background-position: 0 100%;
+		overflow: hidden;
+	}
+}
+
+.latest-deals-grid-item-img-1 {
+	background-image: url("https://cdnp2.stackassets.com/6179061a340aec6fb745648722689d80eb1f1165/store/f861de62ba66a53247f38806f00d41550a956e426fc22b7963aafc23c1b3/sale_28210_primary_image.jpg");
+}
+
+.latest-deals-grid-item-img-2 {
+	background-image: url("https://cdnp3.stackassets.com/0b442829152188ef5c1de0aff7d72820282f26e0/store/73b9b30bec03d67a0c89bae3aaaddafc5a59895b1edd5194d61ab010f926/sale_20564_primary_image.jpg");
+}
+
+.latest-deals-grid-item-img-3 {
+	background-image: url("https://cdnp0.stackassets.com/ed7a2caa93b777aff06ace16c7e965dc10775112/store/2b092be26a07792472d5d01d31b6ee81f5033351f30b96510851958b2cfd/sale_28694_primary_image.jpg");
+}
+
+.latest-deals-grid-item-img-4 {
+	background-image: url("https://cdnp3.stackassets.com/df7735a02cff65584a790daa39d939521e0adde0/store/3781a6b01517a575039e97e95b26f9edbf4916db0bc1d8e2607c2c5a905a/sale_28034_primary_image.jpg");
+}
+
+.latest-deals-grid-item-img-5 {
+	background-image: url("https://cdnp1.stackassets.com/fd8df4e38e61e349fdb70ec86809d3b5e0a0d1ab/store/f1a40487d27f7881e2198eb726be937170b21aed59fb8667e548d0a56ff7/sale_28414_primary_image.jpg");
+}
+
+.latest-deals-grid-item-img-6 {
+	background-image: url("https://cdnp3.stackassets.com/600275c367415b9343a9b4812472fa05f7db59a8/store/dd972578f03549a52ceaac3644e38a3ee41cc83aef912816935d031e21d2/sale_14198_primary_image.jpg");
+}
+
+.latest-deals-grid-item-img-7 {
+	background-image: url("https://cdnp1.stackassets.com/80c619e01841705c913719fbeb2a7d59d0b06b74/store/8b2bffd1fff65448a1d281f7ae49c6b6dfa3395ebe7d0789ec06e927b70f/sale_26679_primary_image.jpg");
+}
+
+.latest-deals-grid-item-img-8 {
+	background-image: url("https://cdnp2.stackassets.com/806da15080f62a741db8a6f5d5f8e9d9aa9c9d98/store/f0758f17b7e6e84b5a6db6b2219d73ed16312fd48b11444fe648c4fdb287/sale_26717_primary_image.jpg");
+}
+
+.latest-deals-grid-item-discount {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.latest-deals-grid-item-discount {
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 10;
+		display: block;
+		width: 80px;
+		height: 80px;
+		color: #000;
+		background-image: url("https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/deals-ribbon.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		overflow: hidden;
+		pointer-events: none;
+	}
+}
+
+.latest-deals-grid-item-discount-percentage {
+	position: relative;
+	top: 25px;
+	left: 8px;
+	width: 100%;
+	transform: rotate(45deg);
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.latest-deals-grid-item-title {
+	margin-bottom: 1px;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 18px;
+	word-wrap: break-word;
+}
+
+@media screen and (min-width: 1024px) {
+	.latest-deals-grid-item-title {
+		margin-bottom: 0;
+		font-size: 16px;
+		line-height: 20px;
+	}
+}
+
+.latest-deals-grid-item-title-link {
+	color: #000;
+	text-decoration: none;
+}
+
+.latest-deals-grid-item-dealprice {
+	padding-top: 4px;
+	font-size: 12px;
+	color: #aaa;
+	line-height: 18px;
+}
+
+@media screen and (min-width: 1024px) {
+	.latest-deals-grid-item-dealprice {
+		line-height: 20px;
+	}
+}
+
+.latest-deals-grid-item-dealprice-old {
+	margin-right: 4px;
+	text-decoration: line-through;
+}
+
+@media screen and (min-width: 1024px) {
+	.latest-deals-grid-item-dealprice-old {
+		font-size: 13px;
+	}
+}
+
+.latest-deals-grid-item-dealprice-new {
+	color: #555;
+	font-size: 14px;
+}
+
+@media screen and (min-width: 1024px) {
+	.latest-deals-grid-item-dealprice-new {
+		font-size: 16px;
 	}
 }
 
 /* Main-footer */
+
 .main-footer {
+	margin-top: 60px;
 	background-color: turquoise;
+}
+
+@media screen and (min-width: 1024px) {
+	.main-footer {
+		margin-top: 85px;
+	}
 }
 
 /* Declaration order 
