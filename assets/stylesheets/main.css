@@ -1263,6 +1263,151 @@ html {
 	}
 }
 
+/* Footer-links */
+
+.footer-links {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	padding-top: 4px;
+	height: 160.5px;
+	background-color: #131313;
+}
+
+@media screen and (min-width: 768px) {
+	.footer-links {
+		padding-top: 15px;
+	}
+}
+
+.footer-links-social {
+	display: flex;
+	justify-content: center;
+}
+
+.footer-links-social-item {
+	margin: 0 3px;
+	background: #333;
+	border-radius: 50%;
+	display: block;
+	height: 40px;
+	padding: 12px;
+	text-align: center;
+	width: 40px;
+}
+
+@media screen and (min-width: 768px) {
+	.footer-links-social-item {
+		margin: 0 8px;
+	}
+}
+
+.footer-links-social-item-icon {
+	display: block;
+	height: 16px;
+	width: 16px;
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/icons-sprite.svg?1520429355783");
+	background-size: 1296px 1296px;
+}
+
+.footer-links-social-item-icon-facebook {
+	background-position: -272px -272px;
+}
+
+.footer-links-social-item-icon-twitter {
+	background-position: -1024px -1024px;
+}
+
+.footer-links-social-item-icon-youtube {
+	background-position: -1280px -1280px;
+}
+
+.footer-links-social-item-icon-instagram {
+	background-position: -416px -416px;
+}
+
+.footer-links-social-item-icon-pinterest {
+	background-position: -672px -672px;
+}
+
+.footer-links-social-item-icon-rss {
+	background-position: -816px -816px;
+}
+
+.footer-links-social-item-icon-mail {
+	background-position: -576px -576px;
+}
+
+.footer-links-menu {
+	display: flex;
+	justify-content: center;
+}
+
+.footer-links-menu-item {
+	margin: 0 4px;
+	font-size: 13px;
+	color: #aaa;
+	font-weight: 500;
+	line-height: 24px;
+	text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+	.footer-links-menu-item {
+		margin: 0 6px;
+	}
+}
+
+/* Footer legal */
+
+.footer-legal {
+	height: 123.5px;
+	padding-top: 32.5px;
+	font-size: 13px;
+	color: #aaa;
+	text-align: center;
+	line-height: 19.5px;
+	background-color: #000;
+}
+
+@media screen and (min-width: 768px) {
+	.footer-legal {
+		height: 97.5px;
+	}
+}
+
+.footer-legal-line {
+	display: block;
+}
+
+@media screen and (min-width: 768px) {
+	.footer-legal-line {
+		display: inline-block;
+		margin-top: 6px;
+	}
+}
+
+.footer-legal-line-logo-tnw,
+.footer-legal-line-logo-stackpath {
+	display: inline-block;
+	height: 9px;
+	margin-right: 1px;
+	vertical-align: baseline;
+}
+
+.footer-legal-line-2 {
+	padding-top: 1px;
+}
+
+.footer-legal-line > b {
+	color: #f42;
+	font-weight: 700;
+}
+
+.footer-legal-line-3 {
+	margin-top: -1px;
+}
+
 /* Declaration order 
 
 	Positioning
